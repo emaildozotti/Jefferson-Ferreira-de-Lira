@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces Variable", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-primary:      #2D5F3F;
+  --color-primary-dark: #1A2E22;
+  --color-dark:         #1A2E22;
+  --color-bg-warm:      #EFF4F1;
+  --color-bg-light:     #F7FAF8;
+  --color-text-main:    #1C2B20;
+  --color-off-white:    #C8A86A;
+  --color-heading:      #1C2B20;
+  --color-secondary:    #C8A86A;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 3px; }
+* { scrollbar-width: thin; scrollbar-color: var(--color-primary) transparent; }
+
+/* Shimmer */
+@keyframes shimmer-sweep {
+  0%   { transform: translateX(-150%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+  padding: 1.25rem 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 35%;
+  background: linear-gradient(90deg, transparent 0%, rgba(200,168,106,0.25) 50%, transparent 100%);
+  transform: translateX(-150%) skewX(-20deg);
+  animation: shimmer-sweep 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Aurora */
+@keyframes aurora-1 {
+  0%, 100% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  33%       { transform: translate(40px, -30px) scale(1.15) rotate(5deg); }
+  66%       { transform: translate(-20px, 25px) scale(0.92) rotate(-3deg); }
+}
+@keyframes aurora-2 {
+  0%, 100% { transform: translate(0, 0) scale(1.1) rotate(0deg); }
+  25%       { transform: translate(-50px, 30px) scale(0.9) rotate(8deg); }
+  75%       { transform: translate(35px, -40px) scale(1.2) rotate(-6deg); }
+}
+@keyframes aurora-3 {
+  0%, 100% { transform: translate(0, 0) scale(0.95); }
+  50%       { transform: translate(20px, 20px) scale(1.05); }
+}
+
+/* Hero fadeUp */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Whitespace */
+.section-padding    { padding-top: 6rem; padding-bottom: 6rem; }
+.section-padding-lg { padding-top: 10rem; padding-bottom: 10rem; }
+@media (min-width: 1024px) {
+  .section-padding    { padding-top: 8rem; padding-bottom: 8rem; }
+  .section-padding-lg { padding-top: 14rem; padding-bottom: 14rem; }
+}
+.container-ultra {
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.eyebrow-ultra {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 400;
+}
+
+/* Signature element: editorial vertical line */
+.editorial-line-dark {
+  border-left: 2px solid #2D5F3F;
+  padding-left: 1.25rem;
+}
+.editorial-line-light {
+  border-left: 2px solid #C8A86A;
+  padding-left: 1.25rem;
+}
