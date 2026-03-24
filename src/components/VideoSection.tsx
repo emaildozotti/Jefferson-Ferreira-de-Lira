@@ -19,7 +19,7 @@ export default function VideoSection() {
               style={{ aspectRatio: '9/16' }}
             >
               <iframe
-                src="https://www.youtube.com/embed/{YOUTUBE_VIDEO_ID}"
+                src="https://www.youtube.com/embed/aO5GR22DmqU"
                 title="Jeff conta sua hist&#243;ria"
                 className="absolute inset-0 w-full h-full"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

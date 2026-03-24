@@ -88,7 +88,7 @@ export default function Hero() {
           >
             {!imgError ? (
               <img
-                src="{URL_HERO_FOTO_JEFF}"
+                src="/foto-jefferson-hero.jpg"
                 alt="Jefferson Ferreira de Lira, psic&#243;logo"
                 className="w-full max-w-xs md:max-w-sm object-cover"
                 style={{ transform: 'rotate(2deg)' }}

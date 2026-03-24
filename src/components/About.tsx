@@ -69,7 +69,7 @@ export default function About() {
               >
                 {!imgError ? (
                   <img
-                    src="{URL_ABOUT_FOTO_JEFF}"
+                    src="/foto-jefferson-sobre.jpg"
                     alt="Jefferson Ferreira de Lira"
                     className="w-full max-w-xs md:max-w-sm object-cover"
                     style={{ transform: 'rotate(2deg)' }}
