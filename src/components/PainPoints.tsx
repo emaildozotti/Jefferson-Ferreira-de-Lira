@@ -11,6 +11,14 @@ export default function PainPoints() {
   return (
     <section className="bg-dark section-padding">
       <div className="container-ultra">
+        {/* Headline */}
+        <FadeIn>
+          <h2 className="font-display font-bold text-off-white text-3xl md:text-4xl lg:text-5xl leading-tight mb-10 max-w-2xl">
+            Por fora, você resolve tudo.<br />
+            <span className="text-primary font-light italic">Por dentro, ninguém faz ideia.</span>
+          </h2>
+        </FadeIn>
+
         {/* Opening - biographical 1st person */}
         <FadeIn>
           <p className="editorial-line-light font-sans font-light text-lg md:text-xl text-off-white/80 max-w-2xl leading-relaxed mb-16">
