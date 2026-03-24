@@ -23,7 +23,14 @@ export default function Method() {
     <section
       className="section-padding-lg relative overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, #1A2E22 0%, rgba(45,95,63,0.15) 100%)',
+        backgroundColor: '#1A2E22',
+        backgroundImage: `repeating-linear-gradient(
+          -45deg,
+          rgba(255,255,255,0.015) 0px,
+          rgba(255,255,255,0.015) 1px,
+          transparent 1px,
+          transparent 12px
+        )`,
       }}
     >
       <div className="container-ultra">
